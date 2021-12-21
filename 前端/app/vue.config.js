@@ -1,0 +1,27 @@
+module.exports={
+    lintOnSave:false,
+    devServer:{
+        overlay:{
+            warning:true,
+            errors:true
+        },
+        port:8821
+    },
+    configureWebpack:{
+        resolve:{
+            alias:{
+                'assets':'@/assets',
+                'components':'@/components',
+                'api':'@/api',
+                'router':'@/router',
+                'storage':'@/index',
+                'store':'@/index',
+                'views':'@/views',
+                'file':'@/file'
+            }
+        }
+    },
+    chainWebpack:config=>{
+        config.resolve.symlinks(true);
+    }
+}
