@@ -23,6 +23,7 @@
 <script>
 import {httpGet, httpPost} from "@/api/api";
 import router from "@/router";
+import {escape} from "../../../prevention/myxss";
 
 export default {
   name: "addnotice",
@@ -41,8 +42,8 @@ export default {
         httpPost({
           url:'/teachers/addnotice',
           params:{
-           noticetitle:that.noticename,
-            noticecontent:that.noticecontent
+           noticetitle:escape(that.noticename),
+            noticecontent:escape(that.noticecontent)
           }
         }).then(res=>{
           if(res.errorCode==0){

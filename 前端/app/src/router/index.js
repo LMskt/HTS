@@ -1,33 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import homepage from "@/views/homepage/homepage";
-import parents from "@/views/parents/parents";
-import teachers from "@/views/teachers/teachers";
-import admin from "@/views/admin/admin";
-import relationship from "@/views/parents/chil/relationship";
-import detail from "@/views/parents/chil/detail";
-import task from "@/views/common/task";
-import addstudent from "@/views/parents/chil/addstudent";
-import mytask from "@/views/parents/chil/mytask";
-import taskhome from "@/views/common/taskhome";
-import addhometask from "@/views/common/addhometask";
-import parnotice from "@/views/parents/chil/parnotice";
-import teastudent from "@/views/teachers/chil/teastudent";
-import teadetail from "@/views/teachers/chil/teadetail";
-import teachertaskhome from "@/views/teachers/chil/teachertaskhome";
-import schtask from "@/views/teachers/chil/schtask";
-import schtask2 from "@/views/teachers/chil/schtask2";
-import teanotice from "@/views/teachers/chil/teanotice";
-import addnotice from "@/views/teachers/chil/addnotice";
-import addschooltask from "@/views/common/addschooltask";
-import astudent from "@/views/admin/chil/astudent";
-import ateacher from "@/views/admin/chil/ateacher";
-import aparent from "@/views/admin/chil/aparent";
-import addstudenta from "@/views/admin/chil/addstudenta";
-import addteachera from "@/views/admin/chil/addteachera";
-import addparenta from "@/views/admin/chil/addparenta";
-
-
+import {store} from "core-js/internals/reflect-metadata";
+// import homepage from "@/views/homepage/homepage";
+// import parents from "@/views/parents/parents";
+// import teachers from "@/views/teachers/teachers";
+// import admin from "@/views/admin/admin";
+// import relationship from "@/views/parents/chil/relationship";
+// import detail from "@/views/parents/chil/detail";
+// import task from "@/views/common/task";
+// import addstudent from "@/views/parents/chil/addstudent";
+// import mytask from "@/views/parents/chil/mytask";
+// import taskhome from "@/views/common/taskhome";
+// import addhometask from "@/views/common/addhometask";
+// import parnotice from "@/views/parents/chil/parnotice";
+// import teastudent from "@/views/teachers/chil/teastudent";
+// import teadetail from "@/views/teachers/chil/teadetail";
+// import teachertaskhome from "@/views/teachers/chil/teachertaskhome";
+// import schtask from "@/views/teachers/chil/schtask";
+// import schtask2 from "@/views/teachers/chil/schtask2";
+// import teanotice from "@/views/teachers/chil/teanotice";
+// import addnotice from "@/views/teachers/chil/addnotice";
+// import addschooltask from "@/views/common/addschooltask";
+// import astudent from "@/views/admin/chil/astudent";
+// import ateacher from "@/views/admin/chil/ateacher";
+// import aparent from "@/views/admin/chil/aparent";
+// import addstudenta from "@/views/admin/chil/addstudenta";
+// import addteachera from "@/views/admin/chil/addteachera";
+// import addparenta from "@/views/admin/chil/addparenta";
+import storage from'@/storage'
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,56 +38,66 @@ const routes = [
   {
     path: '/homepage',
     name:'homepage',
-    component:homepage
+    component:()=>import('@/views/homepage/homepage.vue'),
+    meta: { identity: 0}
   },
   {
     path: '/parents',
     name:'parents',
-    component:parents,
+    component:()=>import('@/views/parents/parents.vue'),
+    meta: { identity: 2},
     children:[
       {
         path: '/parents',
-        redirect:'/relationship'
+        redirect:'/parents/relationship'
       },
       {
-        path:'/relationship',
+        path:'/parents/relationship',
         name:'relationship',
-        component:relationship
+        component:()=>import('@/views/parents/chil/relationship.vue'),
+        meta: { identity: 2}
       },
       {
-        path:'/detail',
+        path:'/parents/detail',
         name:'detail',
-        component:detail
+        component:()=>import('@/views/parents/chil/detail.vue'),
+        meta: { identity: 2}
       },
       {
-        path: '/task',
+        path: '/parents/task',
         name: 'task',
-        component: task
+        component:()=>import('@/views/common/task.vue'),
+        meta: { identity: 2}
       },
       {
-        path: '/addstudent',
+        path: '/parents/addstudent',
         name:'addstudent',
-        component: addstudent
+        component:()=>import('@/views/parents/chil/addstudent.vue'),
+        meta: { identity: 2}
       },
       {
-        path: '/mytask',
+        path: '/parents/mytask',
         name:'mytask',
-        component: mytask
+        component:()=>import('@/views/parents/chil/mytask.vue'),
+        meta: { identity: 2}
       },
       {
-        path:'/taskhome',
+        path:'/parents/taskhome',
         name:'taskhome',
-        component: taskhome
+        component:()=>import('@/views/common/taskhome.vue'),
+        meta: { identity: 2}
       },
       {
-        path: '/addhometask',
+        path: '/parents/addhometask',
         name:'addhometask',
-        component: addhometask
+        component:()=>import('@/views/common/addhometask.vue'),
+        meta: { identity: 2}
       },
       {
-        path: '/parnotice',
+        path: '/parents/parnotice',
         name:'parnotice',
-        component: parnotice
+        component:()=>import('@/views/parents/chil/parnotice.vue'),
+        meta: { identity: 2}
       }
 
     ]
@@ -95,92 +105,109 @@ const routes = [
   {
     path: '/teachers',
     name: 'teachers',
-    component: teachers,
+    component:()=>import('@/views/teachers/teachers.vue'),
+    meta: { identity: 1},
     children: [
       {
         path: '/teachers',
-        redirect: '/teastudent'
+        redirect: '/teachers/teastudent'
       },
       {
-        path: '/teastudent',
+        path: '/teachers/teastudent',
         name: 'teastudent',
-        component: teastudent
+        component:()=>import('@/views/teachers/chil/teastudent.vue'),
+        meta: { identity: 1}
       },
       {
-        path: '/teadetail',
+        path: '/teachers/teadetail',
         name:'teadetail',
-        component: teadetail
+        component:()=>import('@/views/teachers/chil/teadetail.vue'),
+        meta: { identity: 1}
       },
       {
-        path:'/teachertaskhome',
+        path:'/teachers/teachertaskhome',
         name: 'teachertaskhome',
-        component: teachertaskhome
+        component:()=>import('@/views/teachers/chil/teachertaskhome.vue'),
+        meta: { identity: 1}
       },
       {
-        path: '/schtask',
+        path: '/teachers/schtask',
         name: 'schtask',
-        component: schtask
+        component:()=>import('@/views/teachers/chil/schtask.vue'),
+        meta: { identity: 1}
       },
       {
-        path: '/sctask2',
+        path: '/teachers/sctask2',
         name:'sctask2',
-        component: schtask2
+        component:()=>import('@/views/teachers/chil/schtask2.vue'),
+        meta: { identity: 1}
       },
       {
-        path: '/teanotice',
+        path: '/teachers/teanotice',
         name: 'teanotice',
-        component: teanotice
+        component:()=>import('@/views/teachers/chil/teanotice.vue'),
+        meta: { identity: 1}
       },
       {
-        path: '/addnotice',
+        path: '/teachers/addnotice',
         name:'addnotice',
-        component: addnotice
+        component:()=>import('@/views/teachers/chil/addnotice.vue'),
+        meta: { identity: 1}
       },
       {
-        path: '/addschooltask',
+        path: '/teachers/addschooltask',
         name: 'addschooltask',
-        component: addschooltask
+        component:()=>import('@/views/common/addschooltask.vue'),
+        meta: { identity: 1}
       }
     ]
   },
   {
     path: '/admin',
     name:'admin',
-    component: admin,
+    component:()=>import('@/views/admin/admin.vue'),
+    meta: { identity: 3},
     children: [
       {
         path: '/admin',
-        redirect: '/astudent'
+        redirect: '/admin/astudent'
       },
       {
-        path: '/astudent',
+        path: '/admin/astudent',
         name: 'astudent',
-        component: astudent
+        component:()=>import('@/views/admin/chil/astudent.vue'),
+        meta: { identity: 3}
+
       },
       {
-        path: '/ateacher',
+        path: '/admin/ateacher',
         name: 'ateacher',
-        component: ateacher
+        component:()=>import('@/views/admin/chil/ateacher.vue'),
+        meta: { identity: 3}
       },
       {
-        path: '/aparent',
+        path: '/admin/aparent',
         name:'aparent',
-        component: aparent
+        component:()=>import('@/views/admin/chil/aparent.vue'),
+        meta: { identity: 3}
       },
       {
-        path: '/addstudenta',
+        path: '/admin/addstudenta',
         name: 'addstudenta',
-        component: addstudenta
+        component:()=>import('@/views/admin/chil/addstudenta.vue'),
+        meta: { identity: 3}
       },
       {
-        path:'/addteachera',
+        path:'/admin/addteachera',
         name:'addteachera',
-        component: addteachera
+        component:()=>import('@/views/admin/chil/addteachera.vue'),
+        meta: { identity: 3}
       },
       {
-        path: '/addparenta',
+        path: '/admin/addparenta',
         name:'addparenta',
-        component: addparenta
+        component:()=>import('@/views/admin/chil/addparenta.vue'),
+        meta: { identity: 3}
       }
     ]
   }
@@ -190,6 +217,28 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach(function (to, from, next){
+
+  if (storage.get('jwt')==''){
+    if(to.path!='/homepage'){
+      next('/homepage')
+    }else {
+      next()
+    }
+  }else{
+    if (to.meta.identity==0){
+      next()
+    }else{
+      if(to.meta.identity!=storage.get('identity')){
+        next('/homepage')
+      }else {
+        next()
+      }
+    }
+
+  }
 })
 
 export default router

@@ -30,6 +30,8 @@
 <script>
 import {httpGet} from "@/api/api";
 import router from "@/router";
+import {escape} from "../../../prevention/myxss";
+
 export default {
 name: "addstudent",
   data(){
@@ -47,8 +49,8 @@ name: "addstudent",
       httpGet({
         url:'parents/addrelation',
         params:{
-          studentid:that.studentid,
-          relation:that.relation
+          studentid:escape(that.studentid),
+          relation:escape(that.studentid)
         }
       }).then(res=>{
         if(res.errorCode==0){

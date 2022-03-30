@@ -19,8 +19,8 @@
                   <span>学生信息</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="/astudent">已有学生</el-menu-item>
-                  <el-menu-item index="/addstudenta">添加学生</el-menu-item>
+                  <el-menu-item index="/admin/astudent">已有学生</el-menu-item>
+                  <el-menu-item index="/admin/addstudenta">添加学生</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
               <el-submenu index="2">
@@ -29,8 +29,8 @@
                   <span>教师信息</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="/ateacher">已有教师</el-menu-item>
-                  <el-menu-item index="/addteachera">添加教师</el-menu-item>
+                  <el-menu-item index="/admin/ateacher">已有教师</el-menu-item>
+                  <el-menu-item index="/admin/addteachera">添加教师</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
               <el-submenu index="3">
@@ -39,8 +39,8 @@
                   <span>家长信息</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="/aparent">已有家长</el-menu-item>
-                  <el-menu-item index="/addparenta">添加家长</el-menu-item>
+                  <el-menu-item index="/admin/aparent">已有家长</el-menu-item>
+                  <el-menu-item index="/admin/addparenta">添加家长</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
             </el-menu>

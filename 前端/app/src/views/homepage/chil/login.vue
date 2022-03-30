@@ -23,6 +23,7 @@
         </div>
         <div style="height: 20px;width: 94px;margin-left: auto;margin-right: auto;margin-top: 10px">
           <el-button type="primary" @click="login">点击登录</el-button>
+          <el-button type="primary" @click="download">asdasd</el-button>
         </div>
       </form>
     </div>
@@ -34,6 +35,7 @@ import {host} from "@/api/api"
 import axios from "axios";
 import store from "@/store"
 import router from "@/router";
+import {httpfile} from "../../../api/api";
 export default {
 name: "login",
   data(){
@@ -104,6 +106,9 @@ name: "login",
           });
         }
       });
+    },
+    download(){
+    httpfile('D:/zhaopian','aaaa.jpg')
     }
   }
 }

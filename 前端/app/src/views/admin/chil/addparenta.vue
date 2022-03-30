@@ -54,6 +54,7 @@
 
 <script>
 import {httpPost} from "@/api/api";
+import {escape} from "../../../prevention/myxss";
 
 export default {
   name: "addparenta",
@@ -87,13 +88,13 @@ export default {
         httpPost({
           url:'admin/addpar',
           params:{
-            name:that.name,
-            sex:that.sex,
-            age:that.age,
-            phoneNumber:that.phoneNumber,
-            address:that.address,
-            username:that.username,
-            password:that.password
+            name:escape(that.name),
+            sex:escape(that.sex),
+            age:escape(that.age),
+            phoneNumber:escape(that.phoneNumber),
+            address:escape(that.address),
+            username:escape(that.username),
+            password:escape(that.username)
           }
         }).then(res=>{
           if(res.errorCode==0){

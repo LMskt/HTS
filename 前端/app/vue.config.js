@@ -15,9 +15,10 @@ module.exports={
                 'api':'@/api',
                 'router':'@/router',
                 'storage':'@/index',
-                'store':'@/index',
+                'store':'@/store',
                 'views':'@/views',
-                'file':'@/file'
+                'file':'@/file',
+                'prevention':'@/prevention'
             }
         }
     },

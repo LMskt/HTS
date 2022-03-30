@@ -2,6 +2,8 @@ import store from "@/store"
 import axios from "axios";
 import el from "element-ui/src/locale/lang/el";
 import router from "@/router";
+import fi from "element-ui/src/locale/lang/fi";
+import {fileToComponentName} from "@vue/cli-service/lib/commands/build/resolveWcEntry";
 
 let localbaseURL='http://localhost:8281/';
 // let localbaseURL='http://192.168.43.242:8281/';
@@ -13,6 +15,8 @@ export var host=localbaseURL;
 const Axios=axios.create({
     baseURL:localbaseURL,
     timeout:20000,
+    // xsrfCookieName:'csrftoken',
+    // xsrfHeaderName:'X-CSRFToken'
     // headers:{'jwt':store.getters.get_jwt()}
     // withCredentials:true   //开启后，服务器才能拿到你的cookie
 })
@@ -77,6 +81,37 @@ export function httpPost({
         })
     })
 }
+
+export function httpfile(path,filename){
+
+        Axios({
+            url:'/file/down',
+            method:"get",
+            responseType: 'blob',
+            params:{
+                path:path+'/'+filename
+            }
+        }).then(res=>{
+            if ('download' in document.createElement('a')) {
+                console.log(document.createElement('a'))
+                let url = window.URL.createObjectURL(res.data);
+                let link = document.createElement('a');
+                link.style.display = 'none';
+                link.href = url;
+                link.setAttribute('download', filename);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                navigator.msSaveBlob(res.data, 'xxx.jpg')
+            }
+        }).catch(function (error) {
+            console.log(error)
+        })
+
+}
+
+
 
 export function transformBase64(file){
     return new Promise(((resolve, reject) => {

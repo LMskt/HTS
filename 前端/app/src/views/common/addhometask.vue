@@ -61,6 +61,8 @@
 import {Fileload, httpGet, httpPost} from "@/api/api";
 import axios from "axios";
 import router from "@/router";
+import {escape} from "../../prevention/myxss";
+
 export default {
 name: "addhometask",
   data(){
@@ -93,10 +95,10 @@ name: "addhometask",
       httpPost({
         url:'/parents/addtask',
         params:{
-          studentid:this.studentid,
-          taskname:this.taskname,
-          taskcontent:this.taskcontent,
-          taskbehave:this.behave,
+          studentid:escape(this.studentid),
+          taskname:escape(this.taskname),
+          taskcontent:escape(this.taskcontent),
+          taskbehave:escape(this.taskcontent),
         }
       }).then(res=>{
         if(res.errorCode==0){

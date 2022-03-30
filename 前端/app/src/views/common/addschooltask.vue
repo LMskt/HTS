@@ -60,6 +60,8 @@
 <script>
 import {httpGet, httpPost} from "@/api/api";
 import router from "@/router";
+import {escape} from "../../prevention/myxss";
+
 
 export default {
 name: "addschooltask",
@@ -74,6 +76,7 @@ name: "addschooltask",
     }
   },
   methods:{
+
     getstudent:function (){
       var that=this
       httpGet({
@@ -93,10 +96,11 @@ name: "addschooltask",
         httpPost({
           url:'/teachers/addtask',
           params:{
-            studentid:this.studentid,
-            taskname:this.taskname,
-            taskcontent:this.taskcontent,
-            taskbehave:this.behave,
+
+            studentid:escape(this.studentid),
+            taskname:escape(this.taskname),
+            taskcontent:escape(this.taskcontent),
+            taskbehave:escape(this.behave),
           }
         }).then(res=>{
           if(res.errorCode==0){

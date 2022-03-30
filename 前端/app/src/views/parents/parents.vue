@@ -19,8 +19,8 @@
                     <span>学生信息</span>
                   </template>
                   <el-menu-item-group>
-                    <el-menu-item index="/relationship">负责学生</el-menu-item>
-                    <el-menu-item index="/addstudent">添加学生</el-menu-item>
+                    <el-menu-item index="/parents/relationship">负责学生</el-menu-item>
+                    <el-menu-item index="/parents/addstudent">添加学生</el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>
                 <el-submenu index="2">
@@ -29,11 +29,11 @@
                     <span>家庭任务</span>
                   </template>
                   <el-menu-item-group>
-                    <el-menu-item index="/mytask">查看已发布</el-menu-item>
-                    <el-menu-item index="/addhometask">发布新任务</el-menu-item>
+                    <el-menu-item index="/parents/mytask">查看已发布</el-menu-item>
+                    <el-menu-item index="/parents/addhometask">发布新任务</el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>
-                <el-menu-item index="/parnotice" >
+                <el-menu-item index="/parents/parnotice" >
                   <i class="el-icon-document"></i>
                   <span slot="title">查看公告</span>
                 </el-menu-item>

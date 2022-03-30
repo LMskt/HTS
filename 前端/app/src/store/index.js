@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import storage from'@/storage'
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store=new Vuex.Store({
   state: {
     //存放token
     jwt:'',
@@ -38,3 +38,4 @@ export default new Vuex.Store({
   modules: {
   }
 })
+export  default store;

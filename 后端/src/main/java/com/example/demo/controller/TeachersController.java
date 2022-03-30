@@ -48,6 +48,7 @@ public class TeachersController {
     @Autowired
     HttpServletRequest request;
 
+
     @GetMapping("/login")
     @ApiOperation(value = "查询成功返回1，否则返回0")
     //usernama是老师的工号
