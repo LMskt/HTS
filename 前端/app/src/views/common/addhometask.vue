@@ -104,7 +104,7 @@ name: "addhometask",
         if(res.errorCode==0){
           this.submitUpload()
           that.$message('添加成功')
-          router.push("/mytask")
+          router.push("/parents/mytask")
         }else {
           that.$message('添加失败')
         }

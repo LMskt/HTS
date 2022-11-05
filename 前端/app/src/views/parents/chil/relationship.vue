@@ -95,7 +95,7 @@ export default {
     },
     detail:function (studentid){
       router.push({
-        path:"/detail",
+        path:"/parents/detail",
         query:{studentid:studentid}
       })
     },

@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 #backg{
-  background: url("../../../public/picture/background.png");
+  background: url("../../../public/picture/bac.jpg");
   background-size: 100% 100%;
   height: 100%;
   position: fixed;

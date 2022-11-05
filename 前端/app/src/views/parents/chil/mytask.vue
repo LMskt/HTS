@@ -96,7 +96,7 @@ export default {
     },
     detail:function (id){
       router.push({
-        path:"/taskhome",
+        path:"/parents/taskhome",
         query:{id:id}
       })
     },

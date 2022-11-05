@@ -94,7 +94,7 @@ export default {
     },
     detail:function (id){
       router.push({
-        path:"/task",
+        path:"/parents/task",
         query:{id:id}
       })
     }

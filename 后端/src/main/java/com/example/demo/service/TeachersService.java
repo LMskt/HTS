@@ -2,8 +2,8 @@ package com.example.demo.service;
 
 import com.example.demo.entity.teachers;
 import com.example.demo.mapper.TeachersMapper;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import io.swagger.models.auth.In;
+//import com.sun.org.apache.xpath.internal.operations.Bool;
+//import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

@@ -45,12 +45,23 @@
       <recent name="D:\桌面文件\hts实验\前端\app\src\assets" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="Tobase.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app/src/tool/Tobase.js" working-dir="$PROJECT_DIR$/app/src/tool">
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.serve" />
         <item itemvalue="Node.js.Tobase.js" />
       </list>
     </recent_temporary>
@@ -100,6 +111,7 @@
       <workItem from="1641193870765" duration="1000" />
       <workItem from="1641363726931" duration="89000" />
       <workItem from="1641363944057" duration="74000" />
+      <workItem from="1666669102096" duration="108000" />
     </task>
     <servers />
   </component>

@@ -48,7 +48,7 @@ export default {
         }).then(res=>{
           if(res.errorCode==0){
             that.$message('发布成功')
-            router.push("/teanotice")
+            router.push("/teachers/teanotice")
           }else {
             that.$message('添加失败')
           }

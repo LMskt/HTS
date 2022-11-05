@@ -3,13 +3,13 @@
   <div style="width: 80px;height: 80px;margin-left: 100px;float: left">
     <img src="../../../public/picture/logo.png" alt="" style="width: 80px;height: 80px">
   </div>
-    <el-button type="primary" style="float: left;height: 40px;margin-top: 20px;margin-left: 150px"  @click="dialogVisible = true">图片转文字<i class="el-icon-upload el-icon--right"></i></el-button>
+<!--    <el-button type="primary" style="float: left;height: 40px;margin-top: 20px;margin-left: 150px"  @click="dialogVisible = true">图片转文字<i class="el-icon-upload el-icon&#45;&#45;right"></i></el-button>-->
 
-  <div style="width: 182px;height: 80px;margin-left:280px;float: left;color: #202326">
-    <h2 >HTS家校互联</h2>
+  <div style="width: 182px;height: 80px;margin-left:550px;float: left;color: #202326">
+    <h2 >家校通</h2>
   </div>
   <div id="touxiang" style="width: 80px;height: 80px;margin-right: 200px;float: right;">
-    <img  v-bind:src="imgpath"  style="width: 75px;height: 75px;border-radius:50%">
+<!--    <img  v-bind:src="imgpath"  style="width: 75px;height: 75px;border-radius:50%">-->
 <!--    <img src="../../../public/picture/manager.png" alt="">-->
   </div>
   <el-dialog

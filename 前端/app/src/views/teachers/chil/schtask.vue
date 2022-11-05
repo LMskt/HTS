@@ -138,7 +138,7 @@ export default {
     },
     detail:function (id){
       router.push({
-        path:"/sctask2",
+        path:"/teachers/sctask2",
         query:{id:id}
       })
     }

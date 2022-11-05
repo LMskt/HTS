@@ -90,7 +90,7 @@ name: "teastudent",
     },
     detail:function (studentid){
       router.push({
-        path:"/teadetail",
+        path:"/teachers/teadetail",
         query:{studentid:studentid}
       })
     }},

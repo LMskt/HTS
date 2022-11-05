@@ -2,7 +2,7 @@
   <div>
     <div id="box">
       <div id="img">
-        <img src="../../../../public/picture/ren1.png" alt="" style="height: 100px;width: 100px;margin-top: 40px">
+        <img src="../../../../public/picture/boy.png" alt="" style="height: 100px;width: 100px;margin-top: 40px">
       </div>
       <form>
         <div class="input" style="margin-top: 80px;">
@@ -23,7 +23,7 @@
         </div>
         <div style="height: 20px;width: 94px;margin-left: auto;margin-right: auto;margin-top: 10px">
           <el-button type="primary" @click="login">点击登录</el-button>
-          <el-button type="primary" @click="download">asdasd</el-button>
+<!--          <el-button type="primary" @click="download">asdasd</el-button>-->
         </div>
       </form>
     </div>
@@ -45,13 +45,13 @@ name: "login",
     options:[
       {
         value: 1,
-        label:'教师登录'
+        label:'学校端'
       },{
         value: 2,
-        label: '家长登录'
+        label: '家庭端'
       },{
         value: 3,
-        label: '管理员登录'
+        label: '管理员'
       }
     ],
     value:1

@@ -15,10 +15,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1ukVsslP0S4T07S3iqmwyIjQFTT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,6 +34,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\WebStorm\WebStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -38,6 +43,9 @@
       <recent name="D:\桌面文件\hts实验\前端\app\public\picture" />
       <recent name="D:\桌面文件\hts实验\前端\app\public\upfile" />
       <recent name="D:\桌面文件\hts实验\前端\app\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git_localhost\HTS\前端\app\public\picture" />
     </key>
   </component>
   <component name="RunManager">
@@ -105,6 +113,16 @@
       <workItem from="1647869463323" duration="3054000" />
       <workItem from="1647923826470" duration="5000" />
       <workItem from="1647925441909" duration="607000" />
+      <workItem from="1656451611961" duration="469000" />
+      <workItem from="1663059231399" duration="2489000" />
+      <workItem from="1663666679601" duration="11000" />
+      <workItem from="1663667485187" duration="664000" />
+      <workItem from="1663668477408" duration="414000" />
+      <workItem from="1663721141006" duration="3878000" />
+      <workItem from="1666628504586" duration="423000" />
+      <workItem from="1666669237765" duration="1612000" />
+      <workItem from="1666746976547" duration="10174000" />
+      <workItem from="1666787429779" duration="3647000" />
     </task>
     <servers />
   </component>

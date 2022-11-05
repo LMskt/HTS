@@ -55,7 +55,7 @@ name: "addstudent",
       }).then(res=>{
         if(res.errorCode==0){
           that.$message('添加成功')
-          router.push("/relationship")
+          router.push("/parents/relationship")
         }else if(res.errorCode==-10){
           that.$message('查无此学生')
         }else if(res.errorCode==-7){

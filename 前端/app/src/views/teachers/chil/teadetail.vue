@@ -92,7 +92,7 @@ export default {
     },
     detail:function (id){
       router.push({
-        path:"/teachertaskhome",
+        path:"/teachers/teachertaskhome",
         query:{id:id}
       })
     }

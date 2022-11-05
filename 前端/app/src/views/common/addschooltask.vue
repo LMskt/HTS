@@ -106,7 +106,7 @@ name: "addschooltask",
           if(res.errorCode==0){
             this.submitUpload()
             that.$message('添加成功')
-            router.push("/schtask")
+            router.push("/teachers/schtask")
           }else {
             that.$message('添加失败')
           }
